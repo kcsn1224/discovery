@@ -1,0 +1,322 @@
+
+/* ================================
+   JONO EATS - MAIN STYLES
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    color: #222;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 500;
+    margin-left: 15px;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+        center/cover no-repeat;
+}
+
+.hero h1 {
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 21px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    padding: 13px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+
+/* ================================
+   SECTION TITLES
+================================ */
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+/* ================================
+   CATEGORY CARDS
+================================ */
+
+.category-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.category-card h4 {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   FOOD CARDS
+================================ */
+
+.food-card {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.food-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.food-card .card-body {
+    padding: 20px;
+}
+
+.food-card h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.food-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.food-card .btn {
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+
+/* ================================
+   SEARCH BOX
+================================ */
+
+#searchInput {
+    border-radius: 30px;
+    padding: 13px 20px;
+    border: 1px solid #ddd;
+}
+
+#searchInput:focus {
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.2);
+    border-color: #ffc107;
+}
+
+
+/* ================================
+   CART
+================================ */
+
+.cart-item {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.cart-item h5 {
+    font-weight: 700;
+}
+
+
+/* ================================
+   CHECKOUT
+================================ */
+
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-control,
+.form-select {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #ffc107;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.15);
+}
+
+
+/* ================================
+   BUTTONS
+================================ */
+
+.btn-warning {
+    border: none;
+    font-weight: 600;
+}
+
+.btn-warning:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #212529;
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer h4 {
+    font-weight: 700;
+}
+
+footer p {
+    color: #bbb;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================ */
+
+.food-card,
+.category-card {
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ================================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 17px;
+    }
+
+    .food-card img {
+        height: 200px;
+    }
+
+    .navbar-brand {
+        font-size: 21px;
+    }
+
+    .cart-item {
+        text-align: center;
+    }
+
+    .cart-item img {
+        margin-bottom: 15px;
+    }
+
+}
+
